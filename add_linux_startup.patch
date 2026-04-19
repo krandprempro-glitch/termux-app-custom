@@ -1,0 +1,14 @@
+--- a/app/src/main/java/com/termux/app/TermuxActivity.java
++++ b/app/src/main/java/com/termux/app/TermuxActivity.java
+@@ -XX,XX +XX,XX @@ public class TermuxActivity extends Activity {
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
++        
++        // Auto-start Linux
++        try {
++            Runtime.getRuntime().exec("/data/data/com.linux.terminal/files/usr/bin/bash /data/data/com.linux.terminal/files/usr/assets/scripts/auto-linux.sh");
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
+     }

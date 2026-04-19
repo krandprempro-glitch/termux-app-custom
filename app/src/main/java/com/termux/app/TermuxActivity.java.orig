@@ -212,13 +212,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         setActivityTheme();
 
         super.onCreate(savedInstanceState);
-        
-        // Auto-start Linux
-        try {
-            Runtime.getRuntime().exec("/data/data/com.termux/files/usr/bin/bash /data/data/com.termux/files/usr/assets/scripts/auto-linux.sh");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         setContentView(R.layout.activity_termux);
 

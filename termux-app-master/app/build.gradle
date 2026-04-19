@@ -1,0 +1,131 @@
+plugins {
+    id "com.android.application"
+}
+
+ext {
+    packageVariant = "apt-android-7"
+    markwonVersion = "4.6.2"
+}
+
+android {
+    namespace "com.termux"
+    
+    compileSdkVersion project.properties.compileSdkVersion.toInteger()
+    ndkVersion = project.properties.ndkVersion
+
+    defaultConfig {
+        applicationId "com.termux"
+        minSdkVersion project.properties.minSdkVersion.toInteger()
+        targetSdkVersion project.properties.targetSdkVersion.toInteger()
+        versionCode 118
+        versionName "0.118.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            ndkBuild {
+                cFlags "-std=c11", "-Wall", "-Wextra", "-Werror", "-Os", "-fno-stack-protector", "-Wl,--gc-sections"
+            }
+        }
+
+        ndk {
+            abiFilters "arm64-v8a"
+        }
+        
+        // 🔧 إضافة BuildConfig field
+        buildConfigField "String", "TERMUX_PACKAGE_VARIANT", "\"${project.ext.packageVariant}\""
+        
+        manifestPlaceholders = [
+            TERMUX_PACKAGE_NAME: "com.termux",
+            TERMUX_APP_NAME: "Termux",
+            TERMUX_API_APP_NAME: "Termux:API",
+            TERMUX_BOOT_APP_NAME: "Termux:Boot",
+            TERMUX_FLOAT_APP_NAME: "Termux:Float",
+            TERMUX_STYLING_APP_NAME: "Termux:Styling",
+            TERMUX_TASKER_APP_NAME: "Termux:Tasker",
+            TERMUX_WIDGET_APP_NAME: "Termux:Widget"
+        ]
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include "arm64-v8a"
+            universalApk true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            path "src/main/cpp/Android.mk"
+        }
+    }
+
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging true
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.9.0'
+    implementation 'androidx.core:core:1.13.1'
+    implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
+    implementation 'androidx.preference:preference:1.2.1'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.google.guava:guava:33.3.0-android'
+    implementation "io.noties.markwon:core:$markwonVersion"
+    implementation "io.noties.markwon:ext-strikethrough:$markwonVersion"
+    implementation "io.noties.markwon:linkify:$markwonVersion"
+    implementation "io.noties.markwon:recycler:$markwonVersion"
+    
+    implementation project(':terminal-view')
+    implementation project(':termux-shared')
+    
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+    
+    testImplementation 'junit:junit:4.13.2'
+}
+
+task downloadBootstraps {
+    doLast {
+        def bootstrapFile = file('src/main/cpp/bootstrap-aarch64.zip')
+        
+        if (bootstrapFile.exists()) {
+            println "✅ Bootstrap file found at: " + bootstrapFile.absolutePath
+            println "✅ File size: " + (bootstrapFile.length() / 1024 / 1024) + " MB"
+        } else {
+            println "❌ Bootstrap file NOT found!"
+            throw new GradleException("Bootstrap file missing")
+        }
+    }
+}
+
+afterEvaluate {
+    android.applicationVariants.all { variant ->
+        variant.preBuildProvider.get().dependsOn downloadBootstraps
+    }
+}

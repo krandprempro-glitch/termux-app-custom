@@ -1,0 +1,20 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/termux-app-master/app/build.gradle",
+      "selection": {
+        "end": {
+          "column": 1,
+          "index": 3780,
+          "line": 130
+        },
+        "start": {
+          "column": 1,
+          "index": 3780,
+          "line": 130
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/termux-app-master/app/build.gradle"
+}

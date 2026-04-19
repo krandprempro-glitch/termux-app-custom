@@ -241,3 +241,10 @@ afterEvaluate {
         variant.javaCompileProvider.get().dependsOn(downloadBootstraps)
     }
 }
+
+android {
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}

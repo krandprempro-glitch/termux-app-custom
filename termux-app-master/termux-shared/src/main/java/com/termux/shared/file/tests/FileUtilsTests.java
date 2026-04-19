@@ -1,14 +1,14 @@
-package com.termux.shared.file.tests;
+package com.linux.terminal.shared.file.tests;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.errors.Errno;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.file.FileUtilsErrno;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.errors.Error;
+import com.linux.terminal.shared.errors.Errno;
+import com.linux.terminal.shared.file.FileUtils;
+import com.linux.terminal.shared.file.FileUtilsErrno;
+import com.linux.terminal.shared.logger.Logger;
+import com.linux.terminal.shared.errors.Error;
 
 import java.io.File;
 import java.nio.charset.Charset;

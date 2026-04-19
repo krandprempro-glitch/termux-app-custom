@@ -1,4 +1,4 @@
-package com.termux.shared.activity;
+package com.linux.terminal.shared.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,8 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.termux.shared.errors.Error;
-import com.termux.shared.errors.FunctionErrno;
+import com.linux.terminal.shared.errors.Error;
+import com.linux.terminal.shared.errors.FunctionErrno;
 
 
 public class ActivityUtils {

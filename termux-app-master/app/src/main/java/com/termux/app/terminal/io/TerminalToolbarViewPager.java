@@ -1,4 +1,4 @@
-package com.termux.app.terminal.io;
+package com.linux.terminal.app.terminal.io;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.termux.R;
-import com.termux.app.TermuxActivity;
-import com.termux.shared.termux.extrakeys.ExtraKeysView;
-import com.termux.terminal.TerminalSession;
+import com.linux.terminal.R;
+import com.linux.terminal.app.TermuxActivity;
+import com.linux.terminal.shared.termux.extrakeys.ExtraKeysView;
+import com.linux.terminal.terminal.TerminalSession;
 
 public class TerminalToolbarViewPager {
 

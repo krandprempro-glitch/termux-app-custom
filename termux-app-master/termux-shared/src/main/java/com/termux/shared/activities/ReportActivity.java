@@ -1,4 +1,4 @@
-package com.termux.shared.activities;
+package com.linux.terminal.shared.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -16,18 +16,18 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.termux.shared.R;
-import com.termux.shared.activity.media.AppCompatActivityUtils;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.file.filesystem.FileType;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.errors.Error;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.interact.ShareUtils;
-import com.termux.shared.models.ReportInfo;
-import com.termux.shared.theme.NightMode;
+import com.linux.terminal.shared.R;
+import com.linux.terminal.shared.activity.media.AppCompatActivityUtils;
+import com.linux.terminal.shared.data.DataUtils;
+import com.linux.terminal.shared.file.FileUtils;
+import com.linux.terminal.shared.file.filesystem.FileType;
+import com.linux.terminal.shared.logger.Logger;
+import com.linux.terminal.shared.errors.Error;
+import com.linux.terminal.shared.termux.TermuxConstants;
+import com.linux.terminal.shared.markdown.MarkdownUtils;
+import com.linux.terminal.shared.interact.ShareUtils;
+import com.linux.terminal.shared.models.ReportInfo;
+import com.linux.terminal.shared.theme.NightMode;
 
 import org.commonmark.node.FencedCodeBlock;
 import org.jetbrains.annotations.NotNull;
@@ -39,9 +39,9 @@ import io.noties.markwon.recycler.SimpleEntry;
 /**
  * An activity to show reports in markdown format as per CommonMark spec based on config passed as {@link ReportInfo}.
  * Add Following to `AndroidManifest.xml` to use in an app:
- * {@code `<activity android:name="com.termux.shared.activities.ReportActivity" android:theme="@style/Theme.AppCompat.TermuxReportActivity" android:documentLaunchMode="intoExisting" />` }
+ * {@code `<activity android:name="com.linux.terminal.shared.activities.ReportActivity" android:theme="@style/Theme.AppCompat.TermuxReportActivity" android:documentLaunchMode="intoExisting" />` }
  * and
- * {@code `<receiver android:name="com.termux.shared.activities.ReportActivity$ReportActivityBroadcastReceiver"  android:exported="false" />` }
+ * {@code `<receiver android:name="com.linux.terminal.shared.activities.ReportActivity$ReportActivityBroadcastReceiver"  android:exported="false" />` }
  * Receiver **must not** be `exported="true"`!!!
  *
  * Also make an incremental call to {@link #deleteReportInfoFilesOlderThanXDays(Context, int, boolean)}

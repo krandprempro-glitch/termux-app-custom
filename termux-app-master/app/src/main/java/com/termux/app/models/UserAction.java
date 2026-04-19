@@ -1,4 +1,4 @@
-package com.termux.app.models;
+package com.linux.terminal.app.models;
 
 public enum UserAction {
 

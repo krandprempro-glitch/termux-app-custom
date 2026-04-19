@@ -1,12 +1,12 @@
-package com.termux.shared.android;
+package com.linux.terminal.shared.android;
 
 import android.annotation.SuppressLint;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.termux.shared.logger.Logger;
-import com.termux.shared.reflection.ReflectionUtils;
+import com.linux.terminal.shared.logger.Logger;
+import com.linux.terminal.shared.reflection.ReflectionUtils;
 
 import java.lang.reflect.Method;
 

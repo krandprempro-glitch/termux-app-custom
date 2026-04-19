@@ -1,12 +1,12 @@
-package com.termux.shared.shell.command.result;
+package com.linux.terminal.shared.shell.command.result;
 
 import androidx.annotation.NonNull;
 
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.errors.Errno;
-import com.termux.shared.errors.Error;
+import com.linux.terminal.shared.data.DataUtils;
+import com.linux.terminal.shared.logger.Logger;
+import com.linux.terminal.shared.markdown.MarkdownUtils;
+import com.linux.terminal.shared.errors.Errno;
+import com.linux.terminal.shared.errors.Error;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.termux.shared.data;
+package com.linux.terminal.shared.data;
 
 import android.content.Intent;
 import android.os.Bundle;

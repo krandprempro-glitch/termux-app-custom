@@ -1,4 +1,4 @@
-package com.termux.terminal;
+package com.linux.terminal.terminal;
 
 import android.graphics.Color;
 

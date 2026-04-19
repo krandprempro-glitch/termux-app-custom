@@ -1,4 +1,4 @@
-package com.termux.app.terminal;
+package com.linux.terminal.app.terminal;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -17,32 +17,32 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.termux.R;
-import com.termux.app.TermuxActivity;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.interact.MessageDialogUtils;
-import com.termux.shared.interact.ShareUtils;
-import com.termux.shared.shell.ShellUtils;
-import com.termux.shared.termux.TermuxBootstrap;
-import com.termux.shared.termux.terminal.TermuxTerminalViewClientBase;
-import com.termux.shared.termux.extrakeys.SpecialButton;
-import com.termux.shared.android.AndroidUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.activities.ReportActivity;
-import com.termux.shared.models.ReportInfo;
-import com.termux.app.models.UserAction;
-import com.termux.app.terminal.io.KeyboardShortcut;
-import com.termux.shared.termux.settings.properties.TermuxPropertyConstants;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.markdown.MarkdownUtils;
-import com.termux.shared.termux.TermuxUtils;
-import com.termux.shared.termux.data.TermuxUrlUtils;
-import com.termux.shared.view.KeyboardUtils;
-import com.termux.shared.view.ViewUtils;
-import com.termux.terminal.KeyHandler;
-import com.termux.terminal.TerminalEmulator;
-import com.termux.terminal.TerminalSession;
+import com.linux.terminal.R;
+import com.linux.terminal.app.TermuxActivity;
+import com.linux.terminal.shared.file.FileUtils;
+import com.linux.terminal.shared.interact.MessageDialogUtils;
+import com.linux.terminal.shared.interact.ShareUtils;
+import com.linux.terminal.shared.shell.ShellUtils;
+import com.linux.terminal.shared.termux.TermuxBootstrap;
+import com.linux.terminal.shared.termux.terminal.TermuxTerminalViewClientBase;
+import com.linux.terminal.shared.termux.extrakeys.SpecialButton;
+import com.linux.terminal.shared.android.AndroidUtils;
+import com.linux.terminal.shared.termux.TermuxConstants;
+import com.linux.terminal.shared.activities.ReportActivity;
+import com.linux.terminal.shared.models.ReportInfo;
+import com.linux.terminal.app.models.UserAction;
+import com.linux.terminal.app.terminal.io.KeyboardShortcut;
+import com.linux.terminal.shared.termux.settings.properties.TermuxPropertyConstants;
+import com.linux.terminal.shared.data.DataUtils;
+import com.linux.terminal.shared.logger.Logger;
+import com.linux.terminal.shared.markdown.MarkdownUtils;
+import com.linux.terminal.shared.termux.TermuxUtils;
+import com.linux.terminal.shared.termux.data.TermuxUrlUtils;
+import com.linux.terminal.shared.view.KeyboardUtils;
+import com.linux.terminal.shared.view.ViewUtils;
+import com.linux.terminal.terminal.KeyHandler;
+import com.linux.terminal.terminal.TerminalEmulator;
+import com.linux.terminal.terminal.TerminalSession;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -152,7 +152,7 @@ public class TermuxTerminalViewClient extends TermuxTerminalViewClientBase {
     }
 
     /**
-     * Should be called when {@link com.termux.view.TerminalView#mEmulator} is set
+     * Should be called when {@link com.linux.terminal.view.TerminalView#mEmulator} is set
      */
     @Override
     public void onEmulatorSet() {
@@ -735,8 +735,8 @@ public class TermuxTerminalViewClient extends TermuxTerminalViewClientBase {
 
         MessageDialogUtils.showMessage(mActivity, TermuxConstants.TERMUX_APP_NAME + " Report Issue",
             mActivity.getString(R.string.msg_add_termux_debug_info),
-            mActivity.getString(com.termux.shared.R.string.action_yes), (dialog, which) -> reportIssueFromTranscript(transcriptText, true),
-            mActivity.getString(com.termux.shared.R.string.action_no), (dialog, which) -> reportIssueFromTranscript(transcriptText, false),
+            mActivity.getString(com.linux.terminal.shared.R.string.action_yes), (dialog, which) -> reportIssueFromTranscript(transcriptText, true),
+            mActivity.getString(com.linux.terminal.shared.R.string.action_no), (dialog, which) -> reportIssueFromTranscript(transcriptText, false),
             null);
     }
 

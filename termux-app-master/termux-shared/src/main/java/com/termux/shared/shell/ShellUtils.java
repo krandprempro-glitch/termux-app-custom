@@ -1,12 +1,12 @@
-package com.termux.shared.shell;
+package com.linux.terminal.shared.shell;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.termux.shared.file.FileUtils;
-import com.termux.terminal.TerminalBuffer;
-import com.termux.terminal.TerminalEmulator;
-import com.termux.terminal.TerminalSession;
+import com.linux.terminal.shared.file.FileUtils;
+import com.linux.terminal.terminal.TerminalBuffer;
+import com.linux.terminal.terminal.TerminalEmulator;
+import com.linux.terminal.terminal.TerminalSession;
 
 import java.lang.reflect.Field;
 

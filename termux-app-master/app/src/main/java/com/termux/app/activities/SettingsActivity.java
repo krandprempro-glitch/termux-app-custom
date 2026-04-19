@@ -1,4 +1,4 @@
-package com.termux.app.activities;
+package com.linux.terminal.app.activities;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,22 +9,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
-import com.termux.R;
-import com.termux.shared.activities.ReportActivity;
-import com.termux.shared.file.FileUtils;
-import com.termux.shared.models.ReportInfo;
-import com.termux.app.models.UserAction;
-import com.termux.shared.interact.ShareUtils;
-import com.termux.shared.android.PackageUtils;
-import com.termux.shared.termux.settings.preferences.TermuxAPIAppSharedPreferences;
-import com.termux.shared.termux.settings.preferences.TermuxFloatAppSharedPreferences;
-import com.termux.shared.termux.settings.preferences.TermuxTaskerAppSharedPreferences;
-import com.termux.shared.termux.settings.preferences.TermuxWidgetAppSharedPreferences;
-import com.termux.shared.android.AndroidUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.TermuxUtils;
-import com.termux.shared.activity.media.AppCompatActivityUtils;
-import com.termux.shared.theme.NightMode;
+import com.linux.terminal.R;
+import com.linux.terminal.shared.activities.ReportActivity;
+import com.linux.terminal.shared.file.FileUtils;
+import com.linux.terminal.shared.models.ReportInfo;
+import com.linux.terminal.app.models.UserAction;
+import com.linux.terminal.shared.interact.ShareUtils;
+import com.linux.terminal.shared.android.PackageUtils;
+import com.linux.terminal.shared.termux.settings.preferences.TermuxAPIAppSharedPreferences;
+import com.linux.terminal.shared.termux.settings.preferences.TermuxFloatAppSharedPreferences;
+import com.linux.terminal.shared.termux.settings.preferences.TermuxTaskerAppSharedPreferences;
+import com.linux.terminal.shared.termux.settings.preferences.TermuxWidgetAppSharedPreferences;
+import com.linux.terminal.shared.android.AndroidUtils;
+import com.linux.terminal.shared.termux.TermuxConstants;
+import com.linux.terminal.shared.termux.TermuxUtils;
+import com.linux.terminal.shared.activity.media.AppCompatActivityUtils;
+import com.linux.terminal.shared.theme.NightMode;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -42,7 +42,7 @@ public class SettingsActivity extends AppCompatActivity {
                 .commit();
         }
 
-        AppCompatActivityUtils.setToolbar(this, com.termux.shared.R.id.toolbar);
+        AppCompatActivityUtils.setToolbar(this, com.linux.terminal.shared.R.id.toolbar);
         AppCompatActivityUtils.setShowBackButtonInActionBar(this, true);
     }
 

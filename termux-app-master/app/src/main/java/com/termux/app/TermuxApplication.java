@@ -1,21 +1,21 @@
-package com.termux.app;
+package com.linux.terminal.app;
 
 import android.app.Application;
 import android.content.Context;
 
-import com.termux.BuildConfig;
-import com.termux.shared.errors.Error;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.termux.TermuxBootstrap;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.crash.TermuxCrashUtils;
-import com.termux.shared.termux.file.TermuxFileUtils;
-import com.termux.shared.termux.settings.preferences.TermuxAppSharedPreferences;
-import com.termux.shared.termux.settings.properties.TermuxAppSharedProperties;
-import com.termux.shared.termux.shell.command.environment.TermuxShellEnvironment;
-import com.termux.shared.termux.shell.am.TermuxAmSocketServer;
-import com.termux.shared.termux.shell.TermuxShellManager;
-import com.termux.shared.termux.theme.TermuxThemeUtils;
+import com.linux.terminal.BuildConfig;
+import com.linux.terminal.shared.errors.Error;
+import com.linux.terminal.shared.logger.Logger;
+import com.linux.terminal.shared.termux.TermuxBootstrap;
+import com.linux.terminal.shared.termux.TermuxConstants;
+import com.linux.terminal.shared.termux.crash.TermuxCrashUtils;
+import com.linux.terminal.shared.termux.file.TermuxFileUtils;
+import com.linux.terminal.shared.termux.settings.preferences.TermuxAppSharedPreferences;
+import com.linux.terminal.shared.termux.settings.properties.TermuxAppSharedProperties;
+import com.linux.terminal.shared.termux.shell.command.environment.TermuxShellEnvironment;
+import com.linux.terminal.shared.termux.shell.am.TermuxAmSocketServer;
+import com.linux.terminal.shared.termux.shell.TermuxShellManager;
+import com.linux.terminal.shared.termux.theme.TermuxThemeUtils;
 
 public class TermuxApplication extends Application {
 

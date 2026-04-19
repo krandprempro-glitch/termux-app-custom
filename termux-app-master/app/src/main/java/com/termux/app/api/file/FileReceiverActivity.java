@@ -1,4 +1,4 @@
-package com.termux.app.api.file;
+package com.linux.terminal.app.api.file;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,21 +10,21 @@ import android.util.Patterns;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.termux.R;
-import com.termux.shared.android.PackageUtils;
-import com.termux.shared.data.DataUtils;
-import com.termux.shared.data.IntentUtils;
-import com.termux.shared.net.uri.UriUtils;
-import com.termux.shared.interact.MessageDialogUtils;
-import com.termux.shared.net.uri.UriScheme;
-import com.termux.shared.termux.interact.TextInputDialogUtils;
-import com.termux.shared.termux.TermuxConstants;
-import com.termux.shared.termux.TermuxConstants.TERMUX_APP;
-import com.termux.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_SERVICE;
-import com.termux.app.TermuxService;
-import com.termux.shared.logger.Logger;
-import com.termux.shared.termux.settings.properties.TermuxAppSharedProperties;
-import com.termux.shared.termux.settings.properties.TermuxPropertyConstants;
+import com.linux.terminal.R;
+import com.linux.terminal.shared.android.PackageUtils;
+import com.linux.terminal.shared.data.DataUtils;
+import com.linux.terminal.shared.data.IntentUtils;
+import com.linux.terminal.shared.net.uri.UriUtils;
+import com.linux.terminal.shared.interact.MessageDialogUtils;
+import com.linux.terminal.shared.net.uri.UriScheme;
+import com.linux.terminal.shared.termux.interact.TextInputDialogUtils;
+import com.linux.terminal.shared.termux.TermuxConstants;
+import com.linux.terminal.shared.termux.TermuxConstants.TERMUX_APP;
+import com.linux.terminal.shared.termux.TermuxConstants.TERMUX_APP.TERMUX_SERVICE;
+import com.linux.terminal.app.TermuxService;
+import com.linux.terminal.shared.logger.Logger;
+import com.linux.terminal.shared.termux.settings.properties.TermuxAppSharedProperties;
+import com.linux.terminal.shared.termux.settings.properties.TermuxPropertyConstants;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
